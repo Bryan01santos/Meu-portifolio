@@ -40,8 +40,8 @@ A interface foi criada com foco em design moderno, usando cores escuras com deta
 
 ## 🔗 Acesso
 
-Você pode acessar o portfólio online (se hospedado) através deste link:
-[https://seu-link-aqui.com](https://seu-link-aqui.com)
+Você pode acessar o portfólio online através deste link:
+(https://bryan01santos.github.io/Meu-portifolio/)
 
 ---
 
