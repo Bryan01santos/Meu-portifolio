@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>portifólio - BRYAN ABNER SANTOS</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/MyImagem.jpeg" alt="Foto de Bryan Abner Santos" class="foto-perfil">
+        <h1>Bryan Abner Santos</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Front-End</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragafo">
+                Olá! Meu nome é Bryan, sou Desevolvedor Full-Stack, formado em Análise e Desenvolvimento de Software e bacharelando em Engenharia de Software, apaixonado por tecnologia, combino código limpo com designer moderno desenvolvendo não só sites que funcionam
+                perfeitamente mas que impressionam visualmente.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulos">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+
+                <a target="_blank" href="https://github.com/Bryan01santos/to-do-list-javascript"></a>
+
+                <img src="img/Captura de tela 2025-04-02 192909.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">To Do List</h3>
+                    <p>Lista de tarefas com uma interface minimalista e funcional, que permite
+                        adicionar tarefas, visualizar compromissos diários e marcar atividades como concluídas.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+
+                <img src="img/preview.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">eSports explorer</h3>
+                    <p>Pagina com tematica gamer que mostra meus jogos favoritos, streamers que acompanho e minhas redes
+                        sociais.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/Captura de tela 2025-04-02 193054.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Login Dark/Light</h3>
+                    <p>Tela de login com suporte aos modos Dark e Light.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digíte sua mensagem" rows="5" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form"> Enviar Whatsapp </button>
+
+        </form>
+
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5516993814767'
+
+            const texto = 'Olá! Me chamo ${nome}, ${mensagem}'
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = 'https://wa.me/{telefone}?text={msgFormatada}'
+
+            console.log(url)
+
+            window.open(url, '_blank')
+        }
+    </script>
+
+</body>
+
+</html>
